@@ -1,4 +1,5 @@
-FROM nginx:1.25
+# FROM nginx:1.25
+FROM nginx:alpine
 
 LABEL maintainer="Mahmoud Zalt <mahmoud@zalt.me>"
 

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Jobs;
+use Illuminate\Support\Facades\Log;
 
 class ExampleJob extends Job
 {
@@ -21,6 +22,8 @@ class ExampleJob extends Job
      */
     public function handle()
     {
-        //
+        $startDateTime = date("H:i:s");
+        sleep(30);
+        Log::info("測試docker的queue".$startDateTime."=".date("H:i:s"));
     }
 }

@@ -16,3 +16,8 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/laradocker/queue', function () use ($router) {
+    dispatch(new \App\Jobs\ExampleJob());
+    return date("H:i:s")."進入queue";
+});
